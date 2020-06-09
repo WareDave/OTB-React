@@ -3,9 +3,9 @@ import { Card, Button, Image } from 'semantic-ui-react'
 
 function LegalList(props) {
 
-    ia3 { legals } = props
+    const { legals } = props
 
-    ia3 legalList = legals.map((legal) => {
+    const legalList = legals.map((legal) => {
 
         return (
 
@@ -28,17 +28,6 @@ function LegalList(props) {
                     <Card.Description><i className="material-icons">casino</i>price: {legal.price}</Card.Description><br/>
                     <Card.Description><i className="material-icons">message</i>fee: {legal.fee}</Card.Description><br/>
                     <Card.Description><i className="material-icons">message</i>split: {legal.split}</Card.Description><br/>
-                    <Card.Description><i className="material-icons">security</i>split: {legal.split}</Card.Description><br/>
-                    <Card.Description><i className="material-icons">free_breakfast</i>Speed: {legal.speed}</Card.Description><br/>
-                    <Card.Description><i className="material-icons">local_hospital</i>Current HP: {legal.currenthp}</Card.Description><br/>
-                    <Card.Description><i className="material-icons">favorite_border</i>Temp HP: {legal.temphp}</Card.Description><br/>
-                    <Card.Description><i className="material-icons">casino</i>Hit Dice {legal.hdice}</Card.Description><br/>
-                    <Card.Description><i className="material-icons">directions_run</i>Death Saves: {legal.dsaves}</Card.Description><br/>
-                    <Card.Description><i className="material-icons">flash_on</i>Atks and Spells: {legal.atks_spells}</Card.Description><br/>
-                    <Card.Description><i className="material-icons">message</i>Equipment: {legal.equipment}</Card.Description><br/>
-                    <Card.Description><i className="material-icons">message</i>F and T: {legal.fandt}</Card.Description><br/>
-                    <Card.Description><i className="material-icons">fingerprint</i> {legal.loggedUser_id}</Card.Description>
-                </Card.Content>
                 <Card.Content extra>
                     <Button negative onClick={() => props.deleteLegal(legal.id)}>Kill
                     </Button>
