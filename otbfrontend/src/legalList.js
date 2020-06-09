@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Button, Image } from 'semantic-ui-react'
+import { Button, Image, Card } from 'semantic-ui-react'
 
 function LegalList(props) {
 
@@ -33,6 +33,7 @@ function LegalList(props) {
                     </Button>
                     <Button positive onClick={() => props.editLegal(legal.id)}>Edit 
                     </Button>
+                </Card.Content>
                 </Card.Content>
             </Card>
         )
