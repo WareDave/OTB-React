@@ -12,8 +12,6 @@ class CreateLegal extends Component {
             par1: '',
             par2: '',
             par3: '',
-            // alighment: '',
-            // : '',
             ia1: '',
             ia2: '',
             ia3: '',
@@ -25,15 +23,8 @@ class CreateLegal extends Component {
             fee: '',
             split: '',
             coder: '',
-           
             venderID: '',
-            currenthp: '',
-            temphp: '',
-            hdice: '',
-            dsaves: '',
-            atks_spells: '',
-            equipment: '',
-            fandt: ''   
+           
         }
     }
 
