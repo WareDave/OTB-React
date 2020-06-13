@@ -13,7 +13,6 @@ function StockList(props) {
                 <Card.Content>
                     <Image src= 'https://i.imgur.com/jLZM0wws.jpg' wrapped ui={false} />
                     <br/>
-                    
                     <Card.Header><i className="material-icons">face</i> {legal.name}</Card.Header><br/>
                     <Card.Description><i className="material-icons">school</i>category: {stock.category}</Card.Description><br/>
                     <Card.Description><i className="material-icons">hot_tub</i>brend: {stock.brend}</Card.Description><br/>
