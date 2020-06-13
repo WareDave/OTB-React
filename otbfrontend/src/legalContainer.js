@@ -19,17 +19,7 @@ class LegalContainer extends Component {
             par3:"", 
             ia1:'',
             ia2:'',
-            ia3:'',
-            category:"",
-            brend:"",
-            description:"",
-            size:"",
-            price:"",
-            fee:"",
-            split:"",
-            coder: '',
-            venderID:""
-                
+            ia3:'',      
         }
     }
 

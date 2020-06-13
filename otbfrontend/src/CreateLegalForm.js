@@ -15,14 +15,6 @@ class CreateLegal extends Component {
             ia1: '',
             ia2: '',
             ia3: '',
-            category: '',
-            brend: '',
-            description: '',
-            size: '',
-            price: '',
-            fee: '',
-            split: '',
-            coder: '',
             venderID: '',
            
         }
@@ -43,15 +35,7 @@ class CreateLegal extends Component {
             ia1: '',
             ia2: '',
             ia3: '',
-            category: '',
-            brend: '',
-            description: '',
-            size: '',
-            price: '',
-            fee: '',
-            split: '',
-            coder: '',
-            venderID: '',
+            venderID: ''
             
         })
     }
@@ -134,88 +118,7 @@ class CreateLegal extends Component {
                                 onChange={this.handleChange}
                                 />                   
                         </Form.Field>
-                        <Form.Field>
-                            <label>category:</label>
-                            <Form.Input 
-                                type="text"
-                                name="category"
-                                value={this.state.category}
-                                onChange={this.handleChange}
-                                />                   
-                        </Form.Field>
-                        <Form.Field>
-                            <label>brend:</label>
-                            <Form.Input 
-                                type="text"
-                                name="brend"
-                                value={this.state.brend}
-                                onChange={this.handleChange}
-                                />                   
-                        </Form.Field>
-                        <Form.Field>
-                            <label>description:</label>
-                            <Form.Input 
-                                type="text"
-                                name="description"
-                                value={this.state.description}
-                                onChange={this.handleChange}
-                                />                   
-                        </Form.Field>
-                        <Form.Field>
-                            <label>size</label>
-                            <Form.Input 
-                                type="text"
-                                name="size"
-                                value={this.state.size}
-                                onChange={this.handleChange}
-                                />                   
-                        </Form.Field>
-                        <Form.Field>
-                            <label>price</label>
-                            <Form.Input 
-                                type="text"
-                                name="price"
-                                value={this.state.price}
-                                onChange={this.handleChange}
-                                />                   
-                        </Form.Field>
-                        <Form.Field>
-                            <label>fee</label>
-                            <Form.Input 
-                                type="text"
-                                name="fee"
-                                value={this.state.fee}
-                                onChange={this.handleChange}
-                                />                   
-                        </Form.Field>
-                        <Form.Field>
-                            <label>split</label>
-                            <Form.Input 
-                                type="text"
-                                name="split"
-                                value={this.state.split}
-                                onChange={this.handleChange}
-                                />                   
-                        </Form.Field>
-                        <Form.Field>
-                            <label>Armor Class</label>
-                            <Form.Input 
-                                type="text"
-                                name="coder"
-                                value={this.state.coder}
-                                onChange={this.handleChange}
-                                />                   
-                        </Form.Field>
                        
-                        <Form.Field>
-                            <label>venderID</label>
-                            <Form.Input 
-                                type="text"
-                                name="venderID"
-                                value={this.state.venderID}
-                                onChange={this.handleChange}
-                                />                   
-                        </Form.Field>
                         <Button type='submit'>Make It So</Button>
                     </Form>
                 </Modal.Content>
