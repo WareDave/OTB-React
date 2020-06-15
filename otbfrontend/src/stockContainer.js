@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CreateStock from './CreateStockForm'
 // import StockList from './stockList'
-import EditStockModal from './EditStockModal'
+// import EditStockModal from './EditStockModal'
 import { Grid, Button } from 'semantic-ui-react'
 
 
@@ -176,7 +176,7 @@ class StockContainer extends Component {
                         style={{ marginTop: '7em', height: '100%' }}
                     >
                         <Grid.Row>
-                            <Button negative onClick={this.createStock}>+</Button>
+                            <Button negative onClick={this.createStock}>Vender Tool</Button>
                         </Grid.Row>
                            
                             <Grid.Row>
@@ -191,13 +191,13 @@ class StockContainer extends Component {
                                 closeModal={this.closeCreateModal}
                                 addStock={this.addStock}
                             />
-                            <EditStockModal 
+                            {/* <EditStockModal 
                                 open={this.state.editModalOpen}
                                 updateStock={this.updateStock}
                                 stockToEdit={this.state.stockToEdit}
                                 closeModal={this.closeEditModal}
                                 handleEditChange={this.handleEditChange}
-                            />
+                            /> */}
                     </Grid>
                 
                 <Grid 

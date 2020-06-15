@@ -31,6 +31,7 @@ class CreateStock extends Component {
             name: '',
             category: '',
             brend: '',
+            qty:'',
             description: '',
             size: '',
             price: '',
@@ -45,7 +46,7 @@ class CreateStock extends Component {
     render() {
         return(
             <Modal open={this.props.open} closeIcon onClose={this.props.closeModal}>
-                <Header>Create Legal</Header>
+                <Header>Input Stock</Header>
                 <Modal.Content>
                     <Form 
                         size='large'
@@ -62,64 +63,85 @@ class CreateStock extends Component {
                                 onChange={this.handleChange}
                                 />
                         </Form.Field>
-                        <Form.Field>
-                            <label></label>
+                        {/* <Form.Field>
+                            <label>category</label>
                             <Form.Input 
                                 type="text"
                                 name="category"
+                                fluid icon="bookmark"
+                                iconPosition="left"
                                 value={this.state.body}
                                 onChange={this.handleChange}
                                 />                   
-                        </Form.Field>
+                        </Form.Field> */}
                       
                         <Form.Field>
                             <label>brend</label>
                             <Form.Input 
                                 type="text"
                                 name="brend"
+                                fluid icon="bookmark"
+                                iconPosition="left"
                                 value={this.state.brend}
                                 onChange={this.handleChange}
                                 />                   
                         </Form.Field>
                         <Form.Field>
-                            <label></label>
+                            <label>description</label>
                             <Form.Input 
                                 type="text"
                                 name="description"
-                                fluid icon="globe"
+                                fluid icon="bookmark"
                                 iconPosition="left"
                                 value={this.state.description}
                                 onChange={this.handleChange}
                                 />                   
                         </Form.Field>
                        
-                        <Form.Field>
+                        {/* <Form.Field>
                             <label>size:</label>
                             <Form.Input 
                                 type="text"
                                 name="size"
+                                fluid icon="bookmark"
+                                iconPosition="left"
                                 value={this.state.size}
                                 onChange={this.handleChange}
                                 />                   
-                        </Form.Field>
+                        </Form.Field> */}
                         <Form.Field>
                             <label>price:</label>
                             <Form.Input 
                                 type="text"
                                 name="price"
+                                fluid icon="bookmark"
+                                iconPosition="left"
                                 value={this.state.price}
                                 onChange={this.handleChange}
                                 />                   
                         </Form.Field>
                         <Form.Field>
+                            <label>Qty:</label>
+                            <Form.Input 
+                                type="text"
+                                name="qty"
+                                fluid icon="bookmark"
+                                iconPosition="left"
+                                value={this.state.qty}
+                                onChange={this.handleChange}
+                                />                   
+                        </Form.Field>
+                        {/* <Form.Field>
                             <label>fee:</label>
                             <Form.Input 
                                 type="text"
                                 name="fee"
+                                fluid icon="bookmark"
+                                iconPosition="left"
                                 value={this.state.fee}
                                 onChange={this.handleChange}
                                 />                   
-                        </Form.Field>
+                        </Form.Field> */}
                        
                         <Button type='submit'>Make It So</Button>
                     </Form>
