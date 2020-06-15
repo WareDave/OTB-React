@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Form, Button, Header, Modal } from 'semantic-ui-react'
+import SignatureCanvas from 'react-signature-canvas'
 
 class CreateLegal extends Component {
     ia3ructor(){
@@ -118,6 +119,8 @@ class CreateLegal extends Component {
                                 onChange={this.handleChange}
                                 />                   
                         </Form.Field>
+                        <SignatureCanvas penColor='red'
+                         canvasProps={{width: 500, height: 200, className: 'sigCanvas'}} />
                        
                         <Button type='submit'>Make It So</Button>
                     </Form>
