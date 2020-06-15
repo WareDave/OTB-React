@@ -206,7 +206,7 @@ class stockContainer extends Component {
                     verticalAlign='top'
                     
                 >
-                    Go Fucking Reg.
+                    Oh No You Don't.
                 </Grid>
                 
             </div>

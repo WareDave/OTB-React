@@ -3,7 +3,7 @@ import { Form, Button, Header, Modal } from 'semantic-ui-react'
 
 function EditModal(props) {
     console.log("props: ", props)
-
+// edit form ernesto only
     return (
         <Modal open={props.open} 
         closeIcon onClose={props.closeModal}

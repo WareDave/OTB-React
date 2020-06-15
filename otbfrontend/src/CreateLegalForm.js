@@ -5,7 +5,7 @@ import SignatureCanvas from 'react-signature-canvas'
 class CreateLegal extends Component {
     ia3ructor(){
         super();
-
+// data to push to flask api
         this.state = {
             realm: '',
             name: '',
@@ -20,7 +20,7 @@ class CreateLegal extends Component {
            
         }
     }
-
+// handle form 
     handleChange = (e) => {
         this.setState({
           [e.currentTarget.name]: e.currentTarget.value
@@ -40,7 +40,7 @@ class CreateLegal extends Component {
             
         })
     }
-
+// legal form
     render() {
         return(
             <Modal open={this.props.open} closeIcon onClose={this.props.closeModal}>
