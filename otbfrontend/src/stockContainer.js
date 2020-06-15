@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import CreateStock from './CreateStockForm'
-import StockList from './stockList'
+// import StockList from './stockList'
 import EditStockModal from './EditStockModal'
 import { Grid, Button } from 'semantic-ui-react'
 
 
-class stockContainer extends Component {
+class StockContainer extends Component {
 // data to be sent to api
     state = {
         stocks: [],
@@ -75,15 +75,15 @@ class stockContainer extends Component {
 
     getStocks = async () => {
         try {
-            const Legals = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/Stocks/`,
+            const Stocks = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/Stocks/`,
             {
                 method: "GET", 
                 credentials: "include"
             })
-            const parsedLegals = await Legals.json()
-            console.log(parsedLegals)
+            const parsedStocks = await Stocks.json()
+            console.log(parsedStocks)
             this.setState({
-                stocks: parsedLegals.data
+                stocks: parsedStocks.data
             })
         } catch (err) {
             console.log(err);
@@ -92,7 +92,7 @@ class stockContainer extends Component {
     
     editLegal = (idOfStocksEdit) => {
         
-        const stockToEdit = this.state.Stocks.find(Legals => Stocks.id === idOfStocksEdit)
+        const stockToEdit = this.state.Stocks.find(Stocks => Stocks.id === idOfStocksEdit)
         
         this.setState({
             editModalOpen: true,
@@ -127,15 +127,15 @@ class stockContainer extends Component {
 
             const updateResponseParsed = await updateResponse.json()
 
-            const newLegalsArrayWithUpdate = this.state.Stocks.map((Stocks) => {
+            const newStocksArrayWithUpdate = this.state.Stocks.map((Stocks) => {
                 if (Stocks.id === updateResponseParsed.data.id) {
-                    Legals = updateResponseParsed.data
+                    Stocks = updateResponseParsed.data
                 }
-                return Legals 
+                return Stocks 
             })
 
             this.setState({
-                stocks: newLegalsArrayWithUpdate
+                stocks: newStocksArrayWithUpdate
             })
 
             this.closeEditModal()
@@ -181,7 +181,7 @@ class stockContainer extends Component {
                            
                             <Grid.Row>
                                 <stockList
-                                    Legals={this.state.Stocks}
+                                    Stocks={this.state.Stocks}
                                     deleteStock={this.deleteStock}
                                     editLegal={this.editLegal}
                                 />
@@ -214,4 +214,4 @@ class stockContainer extends Component {
     }
 }
 // sending to switch in app.js
-export default stockContainer;
+export default StockContainer;

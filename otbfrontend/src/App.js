@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 import LoginRegisterForm from './LoginRegisterForm'
-import StockContainer from './stockCountainer'
+import StockContainer from './stockContainer'
 // import LegalContainer from './LegalContainer'
 // import Header from './Header'
 import { Route, Switch } from 'react-router-dom'
 import './App.css'
-
-
 
 
 

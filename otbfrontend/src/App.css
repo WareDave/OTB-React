@@ -1,3 +1,24 @@
+.material-icons {
+  font-size: 20px;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: radial-gradient(circle, rgba(0,3,77,1) 0%, rgba(41,153,141,1) 100%);
+  color: silver;
+  text-align: center;
+}
+
+.LoginRegisterForm{
+  background: radial-gradient(circle, rgba(0,3,77,1) 0%, rgba(41,153,141,1) 100%);
+  color: silver;
+  text-align: center; 
+}
+main {
+  flex: 1 0 auto;
+}
+
 .App {
   text-align: center;
 }
