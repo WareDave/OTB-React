@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import LoginRegisterForm from './LoginRegisterForm'
-import StockContainer from '/stockCountainer'
+import StockContainer from './stockCountainer'
+// import LegalContainer from './LegalContainer'
 // import Header from './Header'
 import { Route, Switch } from 'react-router-dom'
 import './App.css'
-import LegalContainer from './src/legalContainer.js'
+
 
 
 
@@ -54,10 +55,9 @@ class App extends Component {
       <main>
           <nav>
             <div class="nav-wrapper">
-              <a href="#" class="brand-logo">WareDave</a>
+              <a href="#" class="brand-logo">Out The Box</a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="/App">Home</a></li>
-                <li><a href="https://github.com/WareDave">WareDave Github</a></li>
+                <li><a href="/">Home</a></li>
               </ul>
             </div>
           </nav>
@@ -83,7 +83,7 @@ class App extends Component {
             }
           />
          
-          <Route
+          {/* <Route
             exact path="/legals"
             render={(props) =>
               <LegalContainer {...props}
@@ -91,7 +91,7 @@ class App extends Component {
               loggedStatus={this.handledLoggedInStatus}
               />
             }
-          />
+          /> */}
         </Switch>
        
 
