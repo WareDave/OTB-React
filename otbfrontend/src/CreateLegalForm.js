@@ -3,7 +3,7 @@ import { Form, Button, Header, Modal } from 'semantic-ui-react'
 import SignatureCanvas from 'react-signature-canvas'
 
 class CreateLegal extends Component {
-    ia3ructor(){
+    constructor(){
         super();
 // data to push to flask api
         this.state = {

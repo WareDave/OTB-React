@@ -39,4 +39,4 @@ function StockList(props) {
     )
 }
 
-export default StockList
+export default StockList;

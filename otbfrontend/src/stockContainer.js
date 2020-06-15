@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import CreateStock from './CreateStockForm'
-import stockList from './stockList'
+import StockList from './stockList'
 import EditStockModal from './EditStockModal'
 import { Grid, Button } from 'semantic-ui-react'
 
 
 class stockContainer extends Component {
-
+// data to be sent to api
     state = {
         stocks: [],
         createModalOpen: false,
@@ -26,7 +26,7 @@ class stockContainer extends Component {
                 
         }
     }
-
+// handle form and checks 
     createStock = () => {
         this.setState({
             createModalOpen: true
@@ -163,7 +163,7 @@ class stockContainer extends Component {
             stocks: this.state.Stocks.filter((Stocks) => Stocks.id !== id)
         })
     }
-
+// form
 
     render() {
         
@@ -213,5 +213,5 @@ class stockContainer extends Component {
         )
     }
 }
-
+// sending to switch in app.js
 export default stockContainer;
