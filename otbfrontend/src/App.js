@@ -63,7 +63,7 @@ class App extends Component {
             <a class='dropdown-trigger fas fa-dice-d20 fa-4x black-text' href='/' data-target='dropdown1'>Vender Tool</a>
             <ul id='dropdown1' class='dropdown-content center'>
               <Link to='/'>home</Link>
-              <Link to='/stocks'>Vender Tool</Link>
+              <Link to='/stocks'>New Items</Link>
             </ul>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
               </ul>
