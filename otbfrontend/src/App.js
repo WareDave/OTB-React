@@ -1,13 +1,20 @@
 import React, { Component } from 'react'
+import M from "materialize-css"; 
 import LoginRegisterForm from './LoginRegisterForm'
 import StockContainer from './stockContainer'
-// import LegalContainer from './LegalContainer'
+import EstockContainer from './EstockContainer'
 // import Header from './Header'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 import './App.css'
 
 
+const $ = window.$;
+M.AutoInit();
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.dropdown-trigger');
+  var instances = M.Dropdown.init(elems, {hover: true});
+});
 
 class App extends Component {
   constructor() {
@@ -52,10 +59,13 @@ class App extends Component {
      
       <main>
           <nav>
-            <div class="nav-wrapper">
-              <a href="#" class="brand-logo">Out The Box</a>
+            <div class="nav-wrapper blue darken 4">
+            <a class='dropdown-trigger fas fa-dice-d20 fa-4x black-text' href='/' data-target='dropdown1'>Vender Tool</a>
+            <ul id='dropdown1' class='dropdown-content center'>
+              <Link to='/'>home</Link>
+              <Link to='/stocks'>Vender Tool</Link>
+            </ul>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
               </ul>
             </div>
           </nav>
@@ -81,15 +91,15 @@ class App extends Component {
             }
           />
          
-          {/* <Route
-            exact path="/legals"
+          <Route
+            exact path="/Estocks"
             render={(props) =>
-              <LegalContainer {...props}
+              <EstockContainer {...props}
               loggedIn={this.state.loggedIn}
               loggedStatus={this.handledLoggedInStatus}
               />
             }
-          /> */}
+          />
         </Switch>
        
 

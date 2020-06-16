@@ -15,6 +15,7 @@ class EStock extends Component {
             size: '',
             price: '',
             fee: '',
+            qty: '',
             venderID: '',
            
         }
@@ -50,7 +51,7 @@ class EStock extends Component {
                 <Modal.Content>
                     <Form 
                         size='large'
-                        onSubmit={(e) => this.props.addLegal(e, this.state)}
+                        onSubmit={(e) => this.props.addStock(e, this.state)}
                     >
                         <Form.Field>
                             <label>Name</label>
@@ -142,8 +143,40 @@ class EStock extends Component {
                                 onChange={this.handleChange}
                                 />                   
                         </Form.Field>
-                       
-                        <Button type='submit'>Make It So</Button>
+                        <Form.Field>
+                            <label>coder:</label>
+                            <Form.Input 
+                                type="text"
+                                name="coder"
+                                fluid icon="bookmark"
+                                iconPosition="left"
+                                value={this.state.coder}
+                                onChange={this.handleChange}
+                                />                   
+                        </Form.Field>
+                        <Form.Field>
+                            <label>splt:</label>
+                            <Form.Input 
+                                type="text"
+                                name="split"
+                                fluid icon="bookmark"
+                                iconPosition="left"
+                                value={this.state.split}
+                                onChange={this.handleChange}
+                                />                   
+                        </Form.Field>
+                        <Form.Field>
+                            <label>venderID:</label>
+                            <Form.Input 
+                                type="text"
+                                name="venderID"
+                                fluid icon="bookmark"
+                                iconPosition="left"
+                                value={this.state.venderID}
+                                onChange={this.handleChange}
+                                />                   
+                        </Form.Field>
+                        <Button type='submit'>Boss Button</Button>
                     </Form>
                 </Modal.Content>
             </Modal>

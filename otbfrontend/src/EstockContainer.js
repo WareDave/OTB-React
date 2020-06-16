@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CreateStock from './CreateStockForm'
+import EStock from './EstockForm'
 // import StockList from './stockList'
 // import EditStockModal from './EditStockModal'
 import { Grid, Button } from 'semantic-ui-react'
@@ -27,7 +27,7 @@ class EstockContainer extends Component {
         }
     }
 // handle form and checks 
-    createStock = () => {
+    EStock = () => {
         this.setState({
             createModalOpen: true
         })
@@ -90,7 +90,7 @@ class EstockContainer extends Component {
         }
     } 
     
-    editLegal = (idOfStocksEdit) => {
+    editStock = (idOfStocksEdit) => {
         
         const stockToEdit = this.state.Stocks.find(Stocks => Stocks.id === idOfStocksEdit)
         
@@ -176,17 +176,17 @@ class EstockContainer extends Component {
                         style={{ marginTop: '7em', height: '100%' }}
                     >
                         <Grid.Row>
-                            <Button negative onClick={this.createStock}>Vender Tool</Button>
+                            <Button negative onClick={this.Estock}>Bosses Tool</Button>
                         </Grid.Row>
                            
                             <Grid.Row>
                                 <stockList
                                     Stocks={this.state.Stocks}
                                     deleteStock={this.deleteStock}
-                                    editLegal={this.editLegal}
+                                    editStock={this.editStock}
                                 />
                             </Grid.Row>
-                            <CreateStock 
+                            <EStock 
                                 open={this.state.createModalOpen}
                                 closeModal={this.closeCreateModal}
                                 addStock={this.addStock}
@@ -206,7 +206,7 @@ class EstockContainer extends Component {
                     verticalAlign='top'
                     
                 >
-                    Oh No You Don't.
+                   Boss Land
                 </Grid>
                 
             </div>
