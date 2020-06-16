@@ -7,7 +7,6 @@ class CreateLegal extends Component {
         super();
 // data to push to flask api
         this.state = {
-            realm: '',
             name: '',
             loggedUser: '',
             par1: '',
@@ -30,7 +29,7 @@ class CreateLegal extends Component {
     clearForm = () => {
         this.setState({
             name: '',
-            par1: '',
+            par1: [],
             par2: '',
             par3: '',
             ia1: '',
@@ -62,17 +61,34 @@ class CreateLegal extends Component {
                                 />
                         </Form.Field>
                         <Form.Field>
-                            <label>Class and Level</label>
+                            <label><p>
+                            Display Rental. Manager shall rent space to vendor on a monthly basis (“vrnder space”). Space is calculated by unit: cost is calculated at 
+                                </p></label>
                             <Form.Input 
                                 type="text"
                                 name="par1"
                                 value={this.state.body}
                                 onChange={this.handleChange}
+                                /> 
+                                <p>per unit per month. Cost per unit is subject to change from one term to another. Manager shall provide vender 30 days written notice if a unit is increasing or decreasing in cost. Vender Agrees to rent</p>
+                                <Form.Input 
+                                type="text"
+                                name="par1"
+                                value={this.state.body}
+                                onChange={this.handleChange}
                                 />                   
+                                <p>(Space Type) of</p>
+                                <Form.Input 
+                                type="text"
+                                name="par1"
+                                value={this.state.body}
+                                onChange={this.handleChange}
+                                /> 
+                                <p>units at the above rate(“Vender Space”)</p>                  
                         </Form.Field>
-                      
+                      <p>Term</p>
                         <Form.Field>
-                            <label>par2</label>
+                            <label>3. Rental Payment</label>
                             <Form.Input 
                                 type="text"
                                 name="par2"
